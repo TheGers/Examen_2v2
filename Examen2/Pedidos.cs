@@ -24,7 +24,7 @@ namespace Examen2
 
         private void groupBox1_Enter(object sender, System.EventArgs e)
         {
-
+            //vacio
         }
 
         private void Pedidos_Load(object sender, System.EventArgs e)

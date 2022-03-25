@@ -28,7 +28,7 @@ namespace Examen2
             Menu menu = new Menu();
             menu.Show();
             this.Hide();
-
+            //me confundi todo ingeniero que nada me salio bien :c
 
 
         }

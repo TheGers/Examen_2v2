@@ -51,7 +51,7 @@ namespace Datos.Accesos
             bool insertar = false;
             try
             {
-                string sql = "INSERT INTO producto VALUES (@codigo_producto, @Descripcion_Producto, @Precio_Producto, @Existencia_Producto);";
+                string sql = "INSERT INTO productos VALUES (@codigo_producto, @Descripcion_Producto, @Precio_Producto, @Existencia_Producto);";
 
                 conn = new MySqlConnection(cadena);
                 conn.Open();

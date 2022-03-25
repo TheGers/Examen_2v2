@@ -12,17 +12,17 @@ namespace Datos.Accesos
         MySqlCommand cmd;
 
 
-        public usuario login(string Codigo_Usuario, string Clave_Usuario)
+        public usuario login(string codigo, string clave)
         {
             usuario user = null;
             try
             {
-                string sql = "SELECT * FROM usuario WHERE Codigo_Usuario = @Codigo_Usuario AND Clave_Usuario = @Clave_Usuario;";
+                string sql = "SELECT * FROM usuario WHERE codigo = @Codigo_Usuario AND clave = @Clave_Usuario;";
                 conn = new MySqlConnection(cadena);
                 conn.Open();
                 cmd = new MySqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@Codigo", Codigo_Usuario);
-                cmd.Parameters.AddWithValue("@Clave", Clave_Usuario);
+                cmd.Parameters.AddWithValue("@Codigo_Usuario", codigo);
+                cmd.Parameters.AddWithValue("@Clave_Usuario", clave);
                 MySqlDataReader reader = cmd.ExecuteReader();
 
                 while (reader.Read())
